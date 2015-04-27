@@ -16,6 +16,15 @@ describe(MyHash) do
       expect(test_hash.fetch("dog")).to(eq("extra-cute"))
     end
   end
+
+  describe("#length") do
+    it("returns the total number of key values") do
+      test_hash = MyHash.new()
+      test_hash.store("kitten", "cute")
+      test_hash.store("dog", "extra-cute")
+      expect(test_hash.length()).to(eq(2))
+    end
+  end
 end
 
 

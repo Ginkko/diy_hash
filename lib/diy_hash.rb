@@ -16,4 +16,8 @@ class MyHash
     @the_hash.at(@the_hash.index(@key)+1)
   end
 
+  define_method(:length) do
+    @the_hash.length./(2)
+  end
+
 end
